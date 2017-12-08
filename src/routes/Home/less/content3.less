@@ -1,0 +1,104 @@
+@import './../../common/less/custom.less';
+
+@content1: content1;
+
+.@{content1} {
+  height: 380px !important;
+  &-wrapper {
+    height: auto;
+  }
+  &-img {
+    height: 100%;
+    width: 54%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    span {
+      display: block;
+      position: absolute;
+      width: 68%;
+      left: 9%;
+      line-height: 380px;
+      height: 380px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  &-text {
+    display: block;
+    width: 42%;
+    height: 260px;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6%;
+    margin: auto;
+    & p, & h1 {
+      position: relative !important;
+      width: 75%;
+      float: right;
+    }
+    & h1 {
+      font-size: 28px !important;
+    }
+    & p {
+      font-size: 16px;
+      line-height: 26px;
+      margin-top: 6px;
+      color: #999;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content1}-wrapper {
+    height: 400px;
+    .@{content1} {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      &-img, &-text {
+        display: block;
+        position: relative;
+        text-align: center;
+      }
+      &-img {
+        width: 87%;
+        margin: 0 auto 20px;
+        height: 240px;
+        span {
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 100%;
+          height: 240px;
+          line-height: 240px;
+        }
+      }
+      &-text {
+        width: 85%;
+        height: 90px;
+        margin-bottom: 20px;
+        left: 0;
+        p, h1 {
+          width: 100%;
+          text-align: left;
+        }
+        h1{
+          font-size: 16px !important;
+          line-height: 24px;
+        }
+        p {
+          margin-top: 8px;
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

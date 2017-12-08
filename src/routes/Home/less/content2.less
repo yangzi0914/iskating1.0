@@ -1,0 +1,117 @@
+@import './../../common/less/custom.less';
+
+@content0: content0;
+
+.@{content0} {
+  height: 380px !important;
+  &-wrapper {
+    height: auto;
+  }
+  &-img {
+    height: 100%;
+    width:48%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    span {
+      display: inline-block;
+      position: absolute;
+      width: 61%;
+      right: 5%;
+      line-height: 380px;
+      height: 380px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      img {
+        vertical-align: middle;
+        &:first-of-type {
+          width: 47%;
+          margin-right: 2%;
+        }
+        &:nth-of-type(2) {
+          width: 51%;
+        }
+      }
+    }
+  }
+  &-text {
+    display: block;
+    width: 44%;
+    height: 260px;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 2%;
+    & p, & h1 {
+      position: relative !important;
+      width: 75%;
+    }
+    & h1 {
+      font-size: 28px !important;
+    }
+    & p {
+      font-size: 16px;
+      line-height: 26px;
+      margin-top: 6px;
+      color: #999;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content0}-wrapper {
+    height: 500px;
+    .@{content0} {
+      width: 90%;
+      margin: auto;
+      height: auto;
+      &-img, &-text {
+        width: 85%;
+        display: block;
+        position: relative;
+        right: 0;
+      }
+      &-img {
+        height: 310px;
+        margin: 0 auto;
+        text-align: center;
+        span {
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 100%;
+          height: auto;
+          img:first-of-type {
+            width: 43%;
+            margin-right: 11%;
+            margin-left: -8px;
+          }
+          img:nth-of-type(2) {
+            width: 46%;
+          }
+        }
+      }
+      &-text {
+        height: 140px;
+        margin-bottom: 20px;
+        p, h1 {
+          width: 100%;
+          text-align: left;
+        }
+        h1{
+          font-size: 16px !important;
+          margin-top: 20px;
+          line-height: 24px;
+        }
+        p {
+          margin-top: 8px;
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

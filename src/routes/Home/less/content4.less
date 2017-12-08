@@ -1,0 +1,80 @@
+@import './../../common/less/custom.less';
+
+@content2: content2;
+.@{content2} {
+  &-wrapper {
+    background-image: url('../../../assets/newMedia.png');
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    margin-top: 124px;
+    padding-top: 80px;
+  }
+  > h1, > p {
+    text-align: center;
+    width: 45%;
+    margin: auto;
+  }
+  > h1 {
+    font-size: 28px;
+  }
+  > p {
+    font-size: 16px !important;
+    line-height: 28px;
+    color: #999;
+  }
+  &-img {
+    span {
+      display: block;
+      width: 45%;
+      text-align: center;
+      margin: 80px auto 0;
+      img {
+        vertical-align: middle;
+        width: 45%;
+        &:nth-of-type(2){
+          position: relative;
+          top: 62px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content2}-wrapper {
+    height: 452px;
+    margin-top: 0;
+    padding-top: 30px;
+    .@{content2} {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      > h1, > p {
+        width: 80%;
+      }
+      > h1 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      > p {
+        font-size: 12px !important;
+        line-height: 20px;
+        margin-top: 8px;
+      }
+      &-img {
+        span {
+          width: 80%;
+          margin: 0 auto;
+          img {
+            width: 50%;
+            &:nth-of-type(2){
+              position: relative;
+              top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

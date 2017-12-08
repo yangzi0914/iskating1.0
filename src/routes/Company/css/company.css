@@ -1,0 +1,55 @@
+.company_banner{
+  height: 480px;
+  background: url('../../../assets/company_banner.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.company_main{
+  width: 65%;
+  margin: 0 auto 120px;
+}
+
+.company_title {
+  font-size: 26px;
+  margin: 56px auto 40px;
+  text-align: left;
+}
+
+.company_content {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .company_banner{
+    height: 210px;
+    background: url('../../../assets/company_banner_phone.png') no-repeat;
+    background-size: 100%;
+  }
+
+  .company_main{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .company_title {
+    font-size: 22px;
+    margin: 20px auto;
+  }
+  
+  .company_content {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 38px;
+    text-align: left;
+  }
+}
